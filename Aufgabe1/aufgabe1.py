@@ -3,41 +3,43 @@ import numpy as np
 import math
 import operator
 
+#creates an empty image
 img = np.zeros((900, 900), dtype=np.uint8)
+#fills it with a colour gradient
 for i in range(900):
     img[:, i] = i/4
 
+#copies a square out of the middle of the img
 copiedSquare = img[400:500, 400:500]
-img[50:150, 50:150] = copiedSquare
-img[650:750, 750:850] = copiedSquare
 
+#switches a area on the img with the copied square
+img[120:220, 120:220] = copiedSquare
+img[680:780, 680:780] = copiedSquare
 
-def circle_path(t, scale, offset):
-    res = (int(scale*math.cos(t)+offset), int(scale*math.sin(t)+offset))
+#function to create the path of a circle
+def circle_path(t, scale, offsetx, offsety):
+    res = (int(scale*math.cos(t)+offsety), int(scale*math.sin(t)+offsetx))
     return res
 
 
 timer = 0.0
-red = (255, 0, 0)
-thin = 3
 
+while True: 
 
-while True:
-    # draw a rectangle that moves on a circular path
-    timer += 0.2
-    pt1 = circle_path(timer, 350, 300)
-    size = (20, 20)
+#create a copy of our image
+    img2 = img.copy()
+    #draws the square in a circular path
+    timer += 0.005
+    pt1 = circle_path(timer, 400, 400, 400)
+    size = (100, 100)
     pt2 = tuple(map(operator.add, pt1, size))
-    img = cv2.rectangle(img, pt1, pt2, red, thin)
+    img2[pt1[1]:pt2[1], pt1[0]:pt2[0]] = copiedSquare
 
     # display the image
-    cv2.imshow('Video image', img)
+    cv2.imshow("ILLUSION", img2)
 
     # press q to close the window
     if cv2.waitKey(10) == ord('q'):
         break
 
-
-# release the video capture object and window
-img.release()
 cv2.destroyAllWindows()
