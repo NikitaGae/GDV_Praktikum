@@ -7,7 +7,7 @@ hue = 100  # 60 is pure green
 hue_range = 30
 saturation = 155
 saturation_range = 115
-value = 100
+value = 250
 value_range = 105
 lower_green = np.array([hue - hue_range, saturation -
                        saturation_range, value - value_range])
@@ -15,7 +15,7 @@ upper_green = np.array([hue + hue_range, saturation +
                        saturation_range, value + value_range])
 
 # load image
-img = cv2.imread("Aufgabe2\Images\chewing_gum_balls01.jpg", cv2.IMREAD_COLOR)
+img = cv2.imread("Aufgabe2\Images\chewing_gum_balls08.jpg", cv2.IMREAD_COLOR)
 img = cv2.resize(img, (600, 800))
 
 # convert to HSV
