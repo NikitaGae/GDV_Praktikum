@@ -3,7 +3,7 @@ from cv2 import erode
 import numpy as np
 import glob
 
-# Goal: Count the number of green smarties in the images
+# Goal: Count the number of blue chewing gums in the images
 # define blue in HSV
 hue = 100  
 hue_range = 10
