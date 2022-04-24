@@ -114,7 +114,7 @@ for img_name in glob.glob("gdv-SoSe2022/images/chewing_gum_balls*.jpg"):
         cv2.rectangle(img, (x, y), (x + w, y + h), green_BGR, 3)
 
     # print out number of connected components
-    print('We have found', str(numLabels-numRejected), 'green smarties.')
+    print('We have found', str(numLabels-numRejected), 'blue chewing gums.')
 
     # show the original image with drawings in one window
     cv2.imshow(img_name, img)
