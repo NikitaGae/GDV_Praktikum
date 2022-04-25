@@ -52,7 +52,9 @@ def closing(img, size, shape):
     return cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
 
 
-for img_name in glob.glob("gdv-SoSe2022/images/chewing_gum_balls*.jpg"):
+# for img_name in glob.glob("gdv-SoSe2022/images/chewing_gum_balls*.jpg"):
+for img_name in glob.glob("Aufgabe2/images/chewing_gum_balls*.jpg"):
+
     print('Searching for colored balls in image:', img_name)
 
     #reading image
