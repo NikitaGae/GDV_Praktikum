@@ -1,4 +1,4 @@
-# GDV-SoSe2022 - Assignment 2
+# GDV-SoSe2022 - Assignment 3
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -55,7 +55,7 @@ Our programm is supposed to count objects. Out of many multicoloured chewing gum
 ## How to use
 
 1. Open file "aufgabe2.py" with the editor of your choice.
-2. Run Python file pressing  <img width="34" alt="Bildschirmfoto 2022-03-29 um 10 59 22" src="https://user-images.githubusercontent.com/72465216/160575079-c79fb7ef-d1e8-4ce0-a107-5bd04166637f.png">  button.
+2. Run with Python.
 3. If you want to go to the next picture press any key but "q".
 4. To end the window press "q". 
 
