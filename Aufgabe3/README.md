@@ -56,7 +56,7 @@ Our program is supposed to hybrid two images. One out of the two images will onl
 
 1. Open file "aufgabe3.py" with the editor of your choice.
 2. Run with Python.
-3. If you want to go to the next picture press any key but "q".
+3. Click on each eye and mouth (three points need to be clicked) on each picture.
 4. To end the window press "q". 
 
 
