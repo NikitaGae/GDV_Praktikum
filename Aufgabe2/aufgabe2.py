@@ -53,7 +53,11 @@ def closing(img, size, shape):
 
 
 # for img_name in glob.glob("gdv-SoSe2022/images/chewing_gum_balls*.jpg"):
+<<<<<<< HEAD
 for img_name in glob.glob("Images\chewing_gum_balls*.jpg"):
+=======
+for img_name in glob.glob("Aufgabe2/Images/chewing_gum_balls*.jpg"):
+>>>>>>> main
 
     print('Searching for colored balls in image:', img_name)
 
