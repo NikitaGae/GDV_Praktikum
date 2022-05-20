@@ -48,14 +48,14 @@ def lowpass(img,sigma,kernelsize):
     return cv2.GaussianBlur(img,(kernelsize,kernelsize),sigma)
 
 #read and resize first image
-img = cv2.imread("Aufgabe3/hund.png", cv2.IMREAD_COLOR)
+img = cv2.imread("Images/Aufgabe3/hund.png", cv2.IMREAD_COLOR)
 img = cv2.resize(img, (500, 500), interpolation=cv2.INTER_CUBIC)
 #apply lowpass to first img and show it after
 img = lowpass(img, kernelsize,sigma)
 cv2.imshow('bild lowpass', img)
 
 #read and resize second image
-img2 = cv2.imread("Aufgabe3/katze.png", cv2.IMREAD_COLOR)
+img2 = cv2.imread("Images/Aufgabe3/katze.png", cv2.IMREAD_COLOR)
 img2 = cv2.resize(img2, (500, 500), interpolation=cv2.INTER_CUBIC)
 #apply lowpass to second img and show it after
 img2 = highpass(img2,kernelsize,sigmaLaplace)
