@@ -3,9 +3,9 @@ import cv2
 
 ref_pt_src = []
 ref_pt_dst = []
-kernelsize=15
-sigma=7
-sigmaLaplace=3
+kernelsize = 15
+sigma = 7
+sigmaLaplace = 3
 
 def click_src(event, x, y, flags, param):
     # grab references to the global variables
@@ -48,23 +48,23 @@ def lowpass(img,sigma,kernelsize):
     return cv2.GaussianBlur(img,(kernelsize,kernelsize),sigma)
 
 #read and resize first image
-img = cv2.imread("GDV_Praktikum\Aufgabe3\hund.png", cv2.IMREAD_COLOR)
+img = cv2.imread("Aufgabe3/hund.png", cv2.IMREAD_COLOR)
 img = cv2.resize(img, (500, 500), interpolation=cv2.INTER_CUBIC)
 #apply lowpass to first img and show it after
 img = lowpass(img, kernelsize,sigma)
 cv2.imshow('bild lowpass', img)
 
 #read and resize second image
-img2 = cv2.imread("GDV_Praktikum\Aufgabe3\katze.png", cv2.IMREAD_COLOR)
+img2 = cv2.imread("Aufgabe3/katze.png", cv2.IMREAD_COLOR)
 img2 = cv2.resize(img2, (500, 500), interpolation=cv2.INTER_CUBIC)
 #apply lowpass to second img and show it after
-img2= highpass(img2,kernelsize,sigmaLaplace)
+img2 = highpass(img2,kernelsize,sigmaLaplace)
 cv2.imshow('bild laplace', img2)
 
 
 rows, cols, dim = img.shape
 clone = img.copy()
-clone2=img2.copy()
+clone2 = img2.copy()
 dst_transform = img2
 cv2.namedWindow('Original')
 cv2.setMouseCallback('Original', click_src)
@@ -87,7 +87,7 @@ while True:
         print('\nAffine transformation:\n', '\n'.join(['\t'.join(['%03.3f' % cell for cell in row]) for row in T_affine]))
         dst_transform = cv2.warpAffine(img, T_affine, (cols, rows))
         
-        dst_transform=cv2.add(img2//2,dst_transform//2)
+        dst_transform = cv2.add(img2//2,dst_transform//2)
         computationDone = True
 
     # display the image and wait for a keypress
@@ -98,7 +98,7 @@ while True:
     # if the 'r' key is pressed, reset the transformation
     if key == ord("r"):
         dst_transform=clone2.copy()
-        img= clone.copy()
+        img = clone.copy()
         ref_pt_src = []
         ref_pt_dst = []
         computationDone = False
