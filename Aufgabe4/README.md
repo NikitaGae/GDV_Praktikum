@@ -56,7 +56,7 @@ Our program creates a mosaic from a selected image. To create the mosaic, the se
 
 1. Open file "aufgabe4.py" with the editor of your choice.
 2. Download the Database [Caltech-101 image data set](https://data.caltech.edu/records/20086) and import it into the folder "data". Please check if your path in line 54 is accurate.
-3. Read an Image u want to make a Mosaic of in line 64/65
+3. Read an Image you want to make a Mosaic of in line 64/65
 4. Set the file name to the name you want to safe the file with in line 29
 5. Run with Python.
 6. To end the window press "q". 
