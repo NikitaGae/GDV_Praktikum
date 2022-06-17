@@ -1,4 +1,4 @@
-# GDV-SoSe2022 - Assignment 3
+# GDV-SoSe2022 - Assignment 4
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -44,7 +44,7 @@ Before using our project, please make sure you have downloaded and installed all
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Our program is supposed to hybrid two images. One out of the two images will only show the low frequencies and the other the high frequencies. One picture will be transformed to fit the other one perfectly. The goal is to create a new picture showing both pictures overlapping and showing both effects (high-frequency and low frequency).
+Our program creates a mosaic from a selected image. To create the mosaic, the selected image is divided into several small squares. For each of these small squares, the "Best Match" is then found from a database. At the end, all "Best Matches" are merged back into one image and create a mosaic. 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -54,7 +54,7 @@ Our program is supposed to hybrid two images. One out of the two images will onl
 <!-- HOWTOUSE -->
 ## How to use
 
-1. Open file "aufgabe3.py" with the editor of your choice.
+1. Open file "aufgabe4.py" with the editor of your choice.
 2. Run with Python.
 3. Click on each eye and mouth (three points need to be clicked) on each picture.
 4. To end the window press "q". 
