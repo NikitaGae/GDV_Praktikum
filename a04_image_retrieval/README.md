@@ -55,8 +55,8 @@ Our program creates a mosaic from a selected image. To create the mosaic, the se
 ## How to use
 
 1. Open file "aufgabe4.py" with the editor of your choice.
-2. Run with Python.
-3. Click on each eye and mouth (three points need to be clicked) on each picture.
+2. Download the Database [Caltech-101 image data set](https://data.caltech.edu/records/20086) and import it into the folder "data". Please check if your path in line xx is accurate. 
+3. Run with Python.
 4. To end the window press "q". 
 
 
